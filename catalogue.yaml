@@ -20,8 +20,8 @@
 
   - name: create app directory                             
     ansible.builtin.file:                            #for linux on a kernal level, everything is a file, directory is just like a path
-    path: /app
-    state: directory                                  #collection name is file, if we want to give directory specifically then state: directory
+      path: /app
+      state: directory                                  #collection name is file, if we want to give directory specifically then state: directory
 
 
   - name: download catalogue
