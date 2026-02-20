@@ -21,7 +21,7 @@
         env: "{{ env }}"
         Name: "{{ item }}-{{ env }}"
     loop: "{{ instances }}"
-    register: ec2-output          #we take the output of instance, and give to r53 to create records
+    register: "ec2-output"          #we take the output of instance, and give to r53 to create records
 
 
   - name: print the output
