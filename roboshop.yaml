@@ -4,7 +4,7 @@
   vars:
     sg_id: sg-017b4d9d9d993f2b1
     ami_id: ami-0220d79f3f480ecf5
-    environment: dev 
+    env: dev 
     instances:
     - mongodb
     - catalogue
@@ -14,12 +14,12 @@
       instance_type: "t3.micro"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
-      name: "{{ item }}-{{ environment }}"
+      name: "{{ item }}-{{ env }}"
       tags: 
         Project: roboshop
         Component: "{{ item }}"
-        Environment: "{{ environment }}"
-        Name: "{{ item }}-{{ environment }}"
+        env: "{{ env }}"
+        Name: "{{ item }}-{{ env }}"
     loop: "{{ instances }}"
 
     register: ec2-output          #we take the output of instance, and give to r53 to create records
