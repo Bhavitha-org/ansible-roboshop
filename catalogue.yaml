@@ -1,36 +1,103 @@
 - name: configure catalogue
   hosts: catalogue
   become: yes
-  tasks: 
+  tasks:
   - name: enable nodejs 20
     ansible.builtin.command: dnf module enable nodejs:20 -y        #this doesn't need shell(don't need '|' '>')
-  
+
   - name: install nodejs
     ansible.builtin.dnf:
       name: nodejs
       state: present
-
+    
   - name: create system user roboshop
     ansible.builtin.user:
       name: roboshop
-      system: true
-      home: /app
+      system: true        #--system like in shell
+      home: /app          #--home /app
       shell: /sbin/nologin
       comment: "Roboshop system user"
 
-  - name: create app directory                             
-    ansible.builtin.file:                            #for linux on a kernal level, everything is a file, directory is just like a path
+  - name: create app directory
+    ansible.builtin.file:                     ##for linux on a kernal level, everything is a file, directory is just like a path
       path: /app
-      state: directory                                  #collection name is file, if we want to give directory specifically then state: directory
-
+      state: directory
 
   - name: download catalogue
     ansible.builtin.get_url:
       url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
       dest: /tmp/catalogue.zip
 
-  - name: unarchive catalogue
+  - name: Unarchive catalogue
     ansible.builtin.unarchive:
       src: /tmp/catalogue.zip
-      dest: /app
-      remote_src: yes                 #File is already present on the target server, Ansible will NOT copy it, It will just extract it
+      dest: /app 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: configure catalogue
+#   hosts: catalogue
+#   become: yes
+#   tasks: 
+#   - name: enable nodejs 20
+#     ansible.builtin.command: dnf module enable nodejs:20 -y        #this doesn't need shell(don't need '|' '>')
+  
+#   - name: install nodejs
+#     ansible.builtin.dnf:
+#       name: nodejs
+#       state: present
+
+#   - name: create system user roboshop
+#     ansible.builtin.user:
+#       name: roboshop
+#       system: true
+#       home: /app
+#       shell: /sbin/nologin
+#       comment: "Roboshop system user"
+
+#   - name: create app directory                             
+#     ansible.builtin.file:                            #for linux on a kernal level, everything is a file, directory is just like a path
+#       path: /app
+#       state: directory                                  #collection name is file, if we want to give directory specifically then state: directory
+
+
+#   - name: download catalogue
+#     ansible.builtin.get_url:
+#       url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip
+#       dest: /tmp/catalogue.zip
+
+#   - name: unarchive catalogue
+#     ansible.builtin.unarchive:
+#       src: /tmp/catalogue.zip
+#       dest: /app
+#       remote_src: yes                 #File is already present on the target server, Ansible will NOT copy it, It will just extract it
