@@ -2,8 +2,9 @@
   hosts: all
   connection: local
   vars:
-    SG_ID: sg-017b4d9d9d993f2b1
+    SG_ID: "sg-017b4d9d9d993f2b1"
     IMAGE_ID: "ami-0220d79f3f480ecf5"
+    domain_name: exploreops.online
     env: dev
     instances:         #if we want few more instances to create then we can override the variable(instances) from command line cuz var. precedence order high for cline than play level vars
     - mongodb
@@ -22,10 +23,22 @@
         Environment: "{{ env }}"
         Name: "{{ item }}-{{ env }}"
     loop: "{{ instances }}"
-    register: ec2_output         #we wrote to create instance but to create r53, we need to have the instance output(ip and all) for that we use register and keep that output in register
+    register: ec2_output         #we wrote to create instance but to create r53, we need to have the instance output(ip, instanceid and all) for that we use register and keep that output in register
 
 
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ ec2_output }}"
+
+
+  - name: create route53 records
+    amazon.aws.route53:
+    state: present
+    zone: "{{ domain_name }}"
+    record: "{{ item.item }}-{{ env }}.{{ domain_name }}"   #mongodb-dev.exploreops.online
+    type: A
+    ttl: 1
+    value: "{{ item.instances[0].private_ip_address }}"
+    wait: true
+  loop: "{{ ec2_output.results }}"
 
