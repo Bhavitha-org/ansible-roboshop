@@ -2,12 +2,12 @@
   hosts: all
   connection: local
   vars:
-  SG_ID: "sg-017b4d9d9d993f2b1"
-  IMAGE_ID: "ami-0220d79f3f480ecf5"
-  env: dev
-  instances:         #if we want few more instances to create then we can override the variable(instances) from command line cuz var. precedence order high for cline than play level vars
-  - mongodb
-  - catalogue
+    SG_ID: sg-017b4d9d9d993f2b1
+    IMAGE_ID: "ami-0220d79f3f480ecf5"
+    env: dev
+    instances:         #if we want few more instances to create then we can override the variable(instances) from command line cuz var. precedence order high for cline than play level vars
+    - mongodb
+    - catalogue
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
