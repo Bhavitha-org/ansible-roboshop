@@ -2,74 +2,30 @@
   hosts: all
   connection: local
   vars:
-    sg_id: sg-017b4d9d9d993f2b1
-    ami_id: ami-0220d79f3f480ecf5
-    domain_name: exploreops.online
-    env: dev 
-    action: create 
-    instances:
-    - mongodb
-    - catalogue
-  tasks: 
-  ####CREATE####
+  SG_ID: "sg-017b4d9d9d993f2b1"
+  IMAGE_ID: "ami-0220d79f3f480ecf5"
+  env: dev
+  instances:         #if we want few more instances to create then we can override the variable(instances) from command line cuz var. precedence order high for cline than play level vars
+  - mongodb
+  - catalogue
+  tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
       instance_type: "t3.micro"
-      security_group: "{{ sg_id }}"
-      image_id: "{{ ami_id }}"
+      security_group: "{{ SG_ID }}"
+      image_id: "{{ IMAGE_ID }}"
+      #networking and availability zone we are leaving it for default
       name: "{{ item }}-{{ env }}"
       tags: 
         Project: roboshop
         Component: "{{ item }}"
-        env: "{{ env }}"
+        Environment: "{{ env }}"
         Name: "{{ item }}-{{ env }}"
     loop: "{{ instances }}"
-    register: ec2_output         #we take the output of instance, and give to r53 to create records
-    when: action == "create"
+    register: ec2_output         #we wrote to create instance but to create r53, we need to have the instance output(ip and all) for that we use register and keep that output in register
+
 
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ ec2_output }}"
-    when: action == "create"
 
-  - name: create r53 records
-    amazon.aws.route53:
-      state: present
-      zone: "{{ domain_name }}"
-      record: "{{ item.item }}-{{ env }}.{{ domain_name }}"   #mongodb-dev.exploreops.online
-      type: A 
-      ttl: 1
-      value: "{{ item.instances[0].private_ip_address }}"
-      wait: true 
-    loop: "{{ec2_output.results}}"
-
-  - name: create r53 records
-    amazon.aws.route53:
-      state: present
-      zone: "{{ domain_name }}"
-      record: "roboshop-{{ env }}.{{ domain_name }}"   #roboshop-dev.exploreops.online
-      type: A 
-      ttl: 1
-      value: "{{ item.instances[0].public_ip_address }}"
-      wait: true 
-    loop: "{{ec2_output.results}}"
-    when: 
-    - item.item == "frontend"
-    - action == "create"
-
-  - name: delete r53 records
-    amazon.aws.route53:
-      state: absent
-      zone: "{{ domain_name }}"
-      record: "{{ item }}}-{{ env }}.{{ domain_name }}"   #roboshop-dev.exploreops.online
-      type: A 
-      ttl: 1
-    loop: "{{ instances }}"
-    when: action == "destroy"
-
-  - name: delete ec2 instance
-    amazon.aws.ec2_instance:
-      state: absent
-      name: "{{ item }}-{{ env }}"
-    loop: "{{ instances }}"
-    when: action == "destroy"
