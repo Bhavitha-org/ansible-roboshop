@@ -78,7 +78,7 @@
   - name: start catalogue
     ansible.builtin.service:
       name: catalogue
-      state: started
+      state: restarted           #restarted is safe option, cuz if it not started, it will start, if it is running, it will restart
       enabled: yes 
 
 
