@@ -6,6 +6,7 @@
     IMAGE_ID: "ami-0220d79f3f480ecf5"
     domain_name: exploreops.online
     env: dev
+    action: create
     instances:         #if we want few more instances to create then we can override the variable(instances) from command line cuz var. precedence order high for cline than play level vars
     - mongodb
     - catalogue
@@ -24,11 +25,12 @@
         Name: "{{ item }}-{{ env }}"
     loop: "{{ instances }}"
     register: ec2_output         #we wrote to create instance but to create r53, we need to have the instance output(ip, instanceid and all) for that we use register and keep that output in register
-
+    when: action == "create"
 
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ ec2_output }}"
+    when: action == "create"
 
 
   - name: create route53 records
@@ -41,6 +43,7 @@
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
     loop: "{{ ec2_output.results }}"
+    when: action == "create"
 
   - name: create route53 records
     amazon.aws.route53:
@@ -52,5 +55,15 @@
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
     loop: "{{ ec2_output.results }}"
-    when: item.item == "frontend"
+    when: #below both needs to be successful &&
+    - item.item == "frontend"
+    - when: action == "create"
+
+
+  - name: delete ec2 instance
+    amazon.aws.ec2_instance:
+      state: absent
+      name: "{{ item }}-{{ env }}"
+    loop: "{{ instances }}" 
+      
 
