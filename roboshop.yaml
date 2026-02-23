@@ -88,6 +88,7 @@
     amazon.aws.ec2_instance:
       state: absent
       name: "{{ item }}-{{ env }}"
+      wait: false                      #without any wait it will delete instances otherwise it takes time
     loop: "{{ instances }}" 
     when: operation == "destroy"
 
