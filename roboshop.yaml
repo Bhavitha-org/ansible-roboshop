@@ -18,6 +18,7 @@
       image_id: "{{ IMAGE_ID }}"
       #networking and availability zone we are leaving it for default
       name: "{{ item }}-{{ env }}"
+      wait: false
       tags: 
         Project: roboshop
         Component: "{{ item }}"
@@ -41,7 +42,8 @@
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
-      wait: true
+      wait: false
+      overwrite: true            #if already created/existed then it overwrites it and create again
     loop: "{{ ec2_output.results }}"
     when: operation == "create"
 
@@ -53,7 +55,8 @@
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
-      wait: true
+      wait: false
+      overwrite: true
     loop: "{{ ec2_output.results }}"
     when: #below both needs to be successful &&
     - item.item == "frontend"
