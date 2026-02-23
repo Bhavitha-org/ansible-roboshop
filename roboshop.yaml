@@ -70,10 +70,10 @@
     when: action == destroy 
 
 
-  # - name: delete ec2 instance
-  #   amazon.aws.ec2_instance:
-  #     state: absent
-  #     name: "{{ item }}-{{ env }}"
-  #   loop: "{{ instances }}" 
-  #   when: action == destroy
+  - name: delete ec2 instance
+    amazon.aws.ec2_instance:
+      state: absent
+      name: "{{ item }}-{{ env }}"
+    loop: "{{ instances }}" 
+    when: action == destroy
 
