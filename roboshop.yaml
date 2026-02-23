@@ -60,10 +60,10 @@
     - when: action == "create"
 
 
-  - name: delete ec2 instance
-    amazon.aws.ec2_instance:
-      state: absent
-      name: "{{ item }}-{{ env }}"
-    loop: "{{ instances }}" 
+  # - name: delete ec2 instance
+  #   amazon.aws.ec2_instance:
+  #     state: absent
+  #     name: "{{ item }}-{{ env }}"
+  #   loop: "{{ instances }}" 
       
 
