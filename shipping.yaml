@@ -63,7 +63,7 @@
     ansible.builtin.systemd_service:
       daemon_reload: true
 
-  - name: install dependencies
+  - name: install dependencies       #got error while running import shipping data so installing these
     ansible.builtin.pip:
       name: "{{ item }}"
       executable: pip3.9
