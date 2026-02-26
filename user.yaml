@@ -48,8 +48,13 @@
     community.general.npm: 
       path: /app            #(path-> package.json in /app loc)
 
+  # - name: copy user service
+  #   ansible.builtin.copy:                        #this will just copy as it is
+  #     src: user.service
+  #     dest: /etc/systemd/system/user.service
+
   - name: copy user service
-    ansible.builtin.copy:
+    ansible.builtin.template:                        #this will take variables and replace it Ex: MONGODB_HOST
       src: user.service
       dest: /etc/systemd/system/user.service
 
