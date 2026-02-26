@@ -18,7 +18,7 @@
       image_id: "{{ IMAGE_ID }}"
       #networking and availability zone we are leaving it for default
       name: "{{ item }}-{{ env }}"
-      wait: false
+      wait: true 
       tags: 
         Project: roboshop
         Component: "{{ item }}"
@@ -59,7 +59,7 @@
     loop: "{{ ec2_output.results }}"
     when: #below both needs to be successful &&
     - item.item == "frontend"
-    - when: operation == "create"
+    - operation == "create"
 
 
   - name: delete r53 records for frontend
