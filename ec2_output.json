@@ -7,161 +7,7 @@
                 "changed": true,
                 "failed": false,
                 "instance_ids": [
-                    "i-0157c9619d25d224f"
-                ],
-                "instances": [
-                    {
-                        "ami_launch_index": 0,
-                        "architecture": "x86_64",
-                        "block_device_mappings": [
-                            {
-                                "device_name": "/dev/sda1",
-                                "ebs": {
-                                    "attach_time": "2026-02-21T10:06:52+00:00",
-                                    "delete_on_termination": true,
-                                    "ebs_card_index": 0,
-                                    "status": "attached",
-                                    "volume_id": "vol-07a0b3e0c11fa9a33"
-                                }
-                            }
-                        ],
-                        "boot_mode": "uefi-preferred",
-                        "capacity_reservation_specification": {
-                            "capacity_reservation_preference": "open"
-                        },
-                        "client_token": "c0ad9008b8b14395b472b72c5694fcb6",
-                        "cpu_options": {
-                            "core_count": 1,
-                            "threads_per_core": 2
-                        },
-                        "current_instance_boot_mode": "uefi",
-                        "ebs_optimized": false,
-                        "ena_support": true,
-                        "enclave_options": {
-                            "enabled": false
-                        },
-                        "hibernation_options": {
-                            "configured": false
-                        },
-                        "hypervisor": "xen",
-                        "image_id": "ami-0220d79f3f480ecf5",
-                        "instance_id": "i-0157c9619d25d224f",
-                        "instance_type": "t3.micro",
-                        "launch_time": "2026-02-21T10:06:51+00:00",
-                        "maintenance_options": {
-                            "auto_recovery": "default",
-                            "reboot_migration": "default"
-                        },
-                        "metadata_options": {
-                            "http_endpoint": "enabled",
-                            "http_protocol_ipv6": "disabled",
-                            "http_put_response_hop_limit": 1,
-                            "http_tokens": "optional",
-                            "instance_metadata_tags": "disabled",
-                            "state": "applied"
-                        },
-                        "monitoring": {
-                            "state": "disabled"
-                        },
-                        "network_interfaces": [
-                            {
-                                "association": {
-                                    "ip_owner_id": "amazon",
-                                    "public_dns_name": "ec2-3-231-93-157.compute-1.amazonaws.com",
-                                    "public_ip": "3.231.93.157"
-                                },
-                                "attachment": {
-                                    "attach_time": "2026-02-21T10:06:51+00:00",
-                                    "attachment_id": "eni-attach-0596d03edccc6dab1",
-                                    "delete_on_termination": true,
-                                    "device_index": 0,
-                                    "network_card_index": 0,
-                                    "status": "attached"
-                                },
-                                "description": "",
-                                "groups": [
-                                    {
-                                        "group_id": "sg-017b4d9d9d993f2b1",
-                                        "group_name": "firewall-1-aws"
-                                    }
-                                ],
-                                "interface_type": "interface",
-                                "ipv6_addresses": [],
-                                "mac_address": "02:a2:a8:a5:07:63",
-                                "network_interface_id": "eni-0d69d044906b11016",
-                                "operator": {
-                                    "managed": false
-                                },
-                                "owner_id": "372665802662",
-                                "private_dns_name": "ip-172-31-8-132.ec2.internal",
-                                "private_ip_address": "172.31.8.132",
-                                "private_ip_addresses": [
-                                    {
-                                        "association": {
-                                            "ip_owner_id": "amazon",
-                                            "public_dns_name": "ec2-3-231-93-157.compute-1.amazonaws.com",
-                                            "public_ip": "3.231.93.157"
-                                        },
-                                        "primary": true,
-                                        "private_dns_name": "ip-172-31-8-132.ec2.internal",
-                                        "private_ip_address": "172.31.8.132"
-                                    }
-                                ],
-                                "source_dest_check": true,
-                                "status": "in-use",
-                                "subnet_id": "subnet-0c06792a9efdf4236",
-                                "vpc_id": "vpc-0751c62bf5a8060c7"
-                            }
-                        ],
-                        "network_performance_options": {
-                            "bandwidth_weighting": "default"
-                        },
-                        "operator": {
-                            "managed": false
-                        },
-                        "placement": {
-                            "availability_zone": "us-east-1a",
-                            "availability_zone_id": "use1-az1",
-                            "group_name": "",
-                            "tenancy": "default"
-                        },
-                        "platform_details": "Red Hat Enterprise Linux",
-                        "private_dns_name": "ip-172-31-8-132.ec2.internal",
-                        "private_dns_name_options": {
-                            "enable_resource_name_dns_a_record": false,
-                            "enable_resource_name_dns_aaaa_record": false,
-                            "hostname_type": "ip-name"
-                        },
-                        "private_ip_address": "172.31.8.132",
-                        "product_codes": [],
-                        "public_dns_name": "ec2-3-231-93-157.compute-1.amazonaws.com",
-                        "public_ip_address": "3.231.93.157",
-                        "root_device_name": "/dev/sda1",
-                        "root_device_type": "ebs",
-                        "security_groups": [
-                            {
-                                "group_id": "sg-017b4d9d9d993f2b1",
-                                "group_name": "firewall-1-aws"
-                            }
-                        ],
-                        "source_dest_check": true,
-                        "state": {
-                            "code": 16,
-                            "name": "running"
-                        },
-                        "state_transition_reason": "",
-                        "subnet_id": "subnet-0c06792a9efdf4236",
-                        "tags": {
-                            "Component": "mongodb",
-                            "Environment": "dev",
-                            "Name": "mongodb-dev",
-                            "Project": "roboshop"
-                        },
-                        "usage_operation": "RunInstances:0010",
-                        "usage_operation_update_time": "2026-02-21T10:06:51+00:00",
-                        "virtualization_type": "hvm",
-                        "vpc_id": "vpc-0751c62bf5a8060c7"
-                    }
+                    "i-056020c32f3eaaf3f"
                 ],
                 "invocation": {
                     "module_args": {
@@ -226,14 +72,14 @@
                         "validate_certs": true,
                         "volumes": null,
                         "vpc_subnet_id": null,
-                        "wait": true,
+                        "wait": false,
                         "wait_timeout": 600
                     }
                 },
                 "item": "mongodb",
                 "spec": {
                     "BlockDeviceMappings": [],
-                    "ClientToken": "c0ad9008b8b14395b472b72c5694fcb6",
+                    "ClientToken": "0181c0b587af49e8b337c7fa5ea81914",
                     "ImageId": "ami-0220d79f3f480ecf5",
                     "InstanceType": "t3.micro",
                     "MaxCount": 1,
@@ -298,161 +144,7 @@
                 "changed": true,
                 "failed": false,
                 "instance_ids": [
-                    "i-02fd4ffd945bd230e"
-                ],
-                "instances": [
-                    {
-                        "ami_launch_index": 0,
-                        "architecture": "x86_64",
-                        "block_device_mappings": [
-                            {
-                                "device_name": "/dev/sda1",
-                                "ebs": {
-                                    "attach_time": "2026-02-21T10:07:11+00:00",
-                                    "delete_on_termination": true,
-                                    "ebs_card_index": 0,
-                                    "status": "attached",
-                                    "volume_id": "vol-0e165f76b4f580c79"
-                                }
-                            }
-                        ],
-                        "boot_mode": "uefi-preferred",
-                        "capacity_reservation_specification": {
-                            "capacity_reservation_preference": "open"
-                        },
-                        "client_token": "f2c6fc6c7e874ff583102c390f534eb5",
-                        "cpu_options": {
-                            "core_count": 1,
-                            "threads_per_core": 2
-                        },
-                        "current_instance_boot_mode": "uefi",
-                        "ebs_optimized": false,
-                        "ena_support": true,
-                        "enclave_options": {
-                            "enabled": false
-                        },
-                        "hibernation_options": {
-                            "configured": false
-                        },
-                        "hypervisor": "xen",
-                        "image_id": "ami-0220d79f3f480ecf5",
-                        "instance_id": "i-02fd4ffd945bd230e",
-                        "instance_type": "t3.micro",
-                        "launch_time": "2026-02-21T10:07:10+00:00",
-                        "maintenance_options": {
-                            "auto_recovery": "default",
-                            "reboot_migration": "default"
-                        },
-                        "metadata_options": {
-                            "http_endpoint": "enabled",
-                            "http_protocol_ipv6": "disabled",
-                            "http_put_response_hop_limit": 1,
-                            "http_tokens": "optional",
-                            "instance_metadata_tags": "disabled",
-                            "state": "applied"
-                        },
-                        "monitoring": {
-                            "state": "disabled"
-                        },
-                        "network_interfaces": [
-                            {
-                                "association": {
-                                    "ip_owner_id": "amazon",
-                                    "public_dns_name": "ec2-44-214-106-163.compute-1.amazonaws.com",
-                                    "public_ip": "44.214.106.163"
-                                },
-                                "attachment": {
-                                    "attach_time": "2026-02-21T10:07:10+00:00",
-                                    "attachment_id": "eni-attach-0e8cacfd875c6ca48",
-                                    "delete_on_termination": true,
-                                    "device_index": 0,
-                                    "network_card_index": 0,
-                                    "status": "attached"
-                                },
-                                "description": "",
-                                "groups": [
-                                    {
-                                        "group_id": "sg-017b4d9d9d993f2b1",
-                                        "group_name": "firewall-1-aws"
-                                    }
-                                ],
-                                "interface_type": "interface",
-                                "ipv6_addresses": [],
-                                "mac_address": "02:a0:ba:fa:0a:ad",
-                                "network_interface_id": "eni-0d959da97b96fb677",
-                                "operator": {
-                                    "managed": false
-                                },
-                                "owner_id": "372665802662",
-                                "private_dns_name": "ip-172-31-9-1.ec2.internal",
-                                "private_ip_address": "172.31.9.1",
-                                "private_ip_addresses": [
-                                    {
-                                        "association": {
-                                            "ip_owner_id": "amazon",
-                                            "public_dns_name": "ec2-44-214-106-163.compute-1.amazonaws.com",
-                                            "public_ip": "44.214.106.163"
-                                        },
-                                        "primary": true,
-                                        "private_dns_name": "ip-172-31-9-1.ec2.internal",
-                                        "private_ip_address": "172.31.9.1"
-                                    }
-                                ],
-                                "source_dest_check": true,
-                                "status": "in-use",
-                                "subnet_id": "subnet-0c06792a9efdf4236",
-                                "vpc_id": "vpc-0751c62bf5a8060c7"
-                            }
-                        ],
-                        "network_performance_options": {
-                            "bandwidth_weighting": "default"
-                        },
-                        "operator": {
-                            "managed": false
-                        },
-                        "placement": {
-                            "availability_zone": "us-east-1a",
-                            "availability_zone_id": "use1-az1",
-                            "group_name": "",
-                            "tenancy": "default"
-                        },
-                        "platform_details": "Red Hat Enterprise Linux",
-                        "private_dns_name": "ip-172-31-9-1.ec2.internal",
-                        "private_dns_name_options": {
-                            "enable_resource_name_dns_a_record": false,
-                            "enable_resource_name_dns_aaaa_record": false,
-                            "hostname_type": "ip-name"
-                        },
-                        "private_ip_address": "172.31.9.1",
-                        "product_codes": [],
-                        "public_dns_name": "ec2-44-214-106-163.compute-1.amazonaws.com",
-                        "public_ip_address": "44.214.106.163",
-                        "root_device_name": "/dev/sda1",
-                        "root_device_type": "ebs",
-                        "security_groups": [
-                            {
-                                "group_id": "sg-017b4d9d9d993f2b1",
-                                "group_name": "firewall-1-aws"
-                            }
-                        ],
-                        "source_dest_check": true,
-                        "state": {
-                            "code": 16,
-                            "name": "running"
-                        },
-                        "state_transition_reason": "",
-                        "subnet_id": "subnet-0c06792a9efdf4236",
-                        "tags": {
-                            "Component": "catalogue",
-                            "Environment": "dev",
-                            "Name": "catalogue-dev",
-                            "Project": "roboshop"
-                        },
-                        "usage_operation": "RunInstances:0010",
-                        "usage_operation_update_time": "2026-02-21T10:07:10+00:00",
-                        "virtualization_type": "hvm",
-                        "vpc_id": "vpc-0751c62bf5a8060c7"
-                    }
+                    "i-0c67feebe8ba99d06"
                 ],
                 "invocation": {
                     "module_args": {
@@ -517,14 +209,14 @@
                         "validate_certs": true,
                         "volumes": null,
                         "vpc_subnet_id": null,
-                        "wait": true,
+                        "wait": false,
                         "wait_timeout": 600
                     }
                 },
                 "item": "catalogue",
                 "spec": {
                     "BlockDeviceMappings": [],
-                    "ClientToken": "f2c6fc6c7e874ff583102c390f534eb5",
+                    "ClientToken": "51effa1e03ed4dfa964fadc47b5a0856",
                     "ImageId": "ami-0220d79f3f480ecf5",
                     "InstanceType": "t3.micro",
                     "MaxCount": 1,
@@ -583,7 +275,1103 @@
                         }
                     ]
                 }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-0ac0e7604622ba179"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "redis-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "redis-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "redis",
+                            "Environment": "dev",
+                            "Name": "redis-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "redis",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "eb5238925f994365b9c16002c2ef2eae",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "redis"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "redis-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "redis"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "redis-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-014b8a634a8bbfb07"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "user-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "user-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "user",
+                            "Environment": "dev",
+                            "Name": "user-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "user",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "8fca52a6f1d24f88bbae54b6cd8cb816",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "user"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "user-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "user"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "user-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-06437024e81c378c7"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "cart-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "cart-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "cart",
+                            "Environment": "dev",
+                            "Name": "cart-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "cart",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "5e1f080731734722afe082fc74b01930",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "cart"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "cart-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "cart"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "cart-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-008312c6e4a0cdfdc"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "mysql-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "mysql-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "mysql",
+                            "Environment": "dev",
+                            "Name": "mysql-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "mysql",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "929ca965eb5e4335858903298565a6d3",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "mysql"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "mysql-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "mysql"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "mysql-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-0ca9e91354663de0d"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "shipping-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "shipping-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "shipping",
+                            "Environment": "dev",
+                            "Name": "shipping-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "shipping",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "6315ab5bf7c94baf9d27cfea1b70063b",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "shipping"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "shipping-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "shipping"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "shipping-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-014b83d87bccbecbb"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "rabbitmq-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "rabbitmq-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "rabbitmq",
+                            "Environment": "dev",
+                            "Name": "rabbitmq-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "rabbitmq",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "c4401ebedbd84273a8b137123326ca61",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "rabbitmq"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "rabbitmq-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "rabbitmq"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "rabbitmq-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-0d9857eabc15a692a"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "payment-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "payment-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "payment",
+                            "Environment": "dev",
+                            "Name": "payment-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "payment",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "834fde18677d4d61a86746cfa00b0129",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "payment"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "payment-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "payment"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "payment-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ansible_loop_var": "item",
+                "changed": true,
+                "failed": false,
+                "instance_ids": [
+                    "i-0e9b30efa7ea37fe5"
+                ],
+                "invocation": {
+                    "module_args": {
+                        "aap_callback": null,
+                        "access_key": null,
+                        "availability_zone": null,
+                        "aws_ca_bundle": "/etc/pki/tls/certs/ca-bundle.crt",
+                        "aws_config": null,
+                        "count": null,
+                        "cpu_credit_specification": null,
+                        "cpu_options": null,
+                        "debug_botocore_endpoint_logs": false,
+                        "detailed_monitoring": null,
+                        "ebs_optimized": null,
+                        "endpoint_url": null,
+                        "exact_count": null,
+                        "filters": {
+                            "image-id": [
+                                "ami-0220d79f3f480ecf5"
+                            ],
+                            "instance-state-name": [
+                                "pending",
+                                "running",
+                                "stopping",
+                                "stopped"
+                            ],
+                            "subnet-id": "subnet-0c06792a9efdf4236",
+                            "tag:Name": [
+                                "frontend-dev"
+                            ]
+                        },
+                        "hibernation_options": false,
+                        "iam_instance_profile": null,
+                        "image": null,
+                        "image_id": "ami-0220d79f3f480ecf5",
+                        "instance_ids": [],
+                        "instance_initiated_shutdown_behavior": null,
+                        "instance_type": "t3.micro",
+                        "key_name": null,
+                        "launch_template": null,
+                        "metadata_options": null,
+                        "name": "frontend-dev",
+                        "network": null,
+                        "placement_group": null,
+                        "profile": null,
+                        "purge_tags": true,
+                        "region": "us-east-1",
+                        "secret_key": null,
+                        "security_group": "sg-017b4d9d9d993f2b1",
+                        "security_groups": [],
+                        "session_token": null,
+                        "state": "present",
+                        "tags": {
+                            "Component": "frontend",
+                            "Environment": "dev",
+                            "Name": "frontend-dev",
+                            "Project": "roboshop"
+                        },
+                        "tenancy": null,
+                        "termination_protection": null,
+                        "user_data": null,
+                        "validate_certs": true,
+                        "volumes": null,
+                        "vpc_subnet_id": null,
+                        "wait": false,
+                        "wait_timeout": 600
+                    }
+                },
+                "item": "frontend",
+                "spec": {
+                    "BlockDeviceMappings": [],
+                    "ClientToken": "37a9c83324c841768c10d8b40674b5b0",
+                    "ImageId": "ami-0220d79f3f480ecf5",
+                    "InstanceType": "t3.micro",
+                    "MaxCount": 1,
+                    "MinCount": 1,
+                    "NetworkInterfaces": [
+                        {
+                            "DeviceIndex": 0,
+                            "Groups": [
+                                "sg-017b4d9d9d993f2b1"
+                            ],
+                            "SubnetId": "subnet-0c06792a9efdf4236"
+                        }
+                    ],
+                    "TagSpecifications": [
+                        {
+                            "ResourceType": "volume",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "frontend"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "frontend-dev"
+                                }
+                            ]
+                        },
+                        {
+                            "ResourceType": "instance",
+                            "Tags": [
+                                {
+                                    "Key": "Project",
+                                    "Value": "roboshop"
+                                },
+                                {
+                                    "Key": "Component",
+                                    "Value": "frontend"
+                                },
+                                {
+                                    "Key": "Environment",
+                                    "Value": "dev"
+                                },
+                                {
+                                    "Key": "Name",
+                                    "Value": "frontend-dev"
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         ],
         "skipped": false
-}
+    }
