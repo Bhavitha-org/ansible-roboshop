@@ -67,7 +67,7 @@
   #here, we have mysql db modules
 
   - name: import shipping data
-    community.mysql.mysql-db:
+    community.mysql.mysql_db:
       state: import
       name: all
       login_host: "{{ MYSQL_HOST }}"         #-h host
